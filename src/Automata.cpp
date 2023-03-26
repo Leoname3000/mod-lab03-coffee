@@ -86,6 +86,7 @@ std::string Automata::getStateString() {
         case CHECK: return "Check";
         case COOK: return "Cook";
     }
+    throw std::runtime_error("State not provided!");
 }
 Automata::STATES Automata::getState() {
     return state;

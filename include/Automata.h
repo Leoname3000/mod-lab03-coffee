@@ -1,10 +1,13 @@
 // Copyright 2022 UNN-IASR
 
+#ifndef INCLUDE_AUTOMATA_H_
+#define INCLUDE_AUTOMATA_H_
+
 #include <string>
 #include <vector>
 
 class Automata {
-   public:
+ public:
     enum STATES {
         OFF,
         WAIT,
@@ -24,7 +27,7 @@ class Automata {
     void choice(unsigned int);
     void cancel();
 
-   private:
+ private:
     unsigned int cash;
     std::vector<std::string> menu;
     std::vector<unsigned int> prices;
@@ -35,3 +38,5 @@ class Automata {
     void cook(unsigned int);
     void finish();
 };
+
+#endif // INCLUDE_AUTOMATA_H_
