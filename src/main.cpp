@@ -1,32 +1,32 @@
+// Copyright 2022 UNN-IASR
+
 #include <iostream>
 #include "Automata.h"
 
-using namespace std;
-
 int main() {
     Automata automata;
-    cout << "Current state is: " << automata.getStateString() << endl;
+    std::cout << "Current state is: " << automata.getStateString() << std::endl;
 
     automata.on();
-    cout << endl << automata.getMenu() << endl;
-    cout << "Current state is: " << automata.getStateString() << endl << endl;
+    std::cout << std::endl << automata.getMenu() << std::endl;
+    std::cout << "Current state is: " << automata.getStateString() << std::endl << std::endl;
 
     automata.coin(45);
-    cout << "Current state is: " << automata.getStateString() << endl << endl;
+    std::cout << "Current state is: " << automata.getStateString() << std::endl << std::endl;
 
     automata.choice(3);
-    cout << "Current state is: " << automata.getStateString() << endl << endl;
+    std::cout << "Current state is: " << automata.getStateString() << std::endl << std::endl;
 
     automata.choice(9);
-    cout << "Current state is: " << automata.getStateString() << endl << endl;
+    std::cout << "Current state is: " << automata.getStateString() << std::endl << std::endl;
 
     automata.coin(10);
-    cout << "Current state is: " << automata.getStateString() << endl << endl;
+    std::cout << "Current state is: " << automata.getStateString() << std::endl << std::endl;
 
     automata.choice(3);
-    cout << "Current state is: " << automata.getStateString() << endl << endl;
+    std::cout << "Current state is: " << automata.getStateString() << std::endl << std::endl;
 
     automata.off();
-    cout << "Current state is: " << automata.getStateString() << endl;
+    std::cout << "Current state is: " << automata.getStateString() << std::endl;
     return 0;
 }

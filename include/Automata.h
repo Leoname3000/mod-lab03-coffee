@@ -1,13 +1,10 @@
-#ifndef MOD_LAB03_COFFEE_INCLUDE_AUTOMATA_H_
-#define MOD_LAB03_COFFEE_INCLUDE_AUTOMATA_H_
+// Copyright 2022 UNN-IASR
 
 #include <string>
 #include <vector>
 
-using namespace std;
-
 class Automata {
-  public:
+   public:
     enum STATES {
         OFF,
         WAIT,
@@ -17,8 +14,8 @@ class Automata {
     };
 
     Automata();
-    string getMenu();
-    string getStateString();
+    std::string getMenu();
+    std::string getStateString();
     STATES getState();
 
     void on();
@@ -27,10 +24,10 @@ class Automata {
     void choice(unsigned int);
     void cancel();
 
-  private:
+   private:
     unsigned int cash;
-    vector<string> menu;
-    vector<unsigned int> prices;
+    std::vector<std::string> menu;
+    std::vector<unsigned int> prices;
     STATES state;
 
     void change();
@@ -38,5 +35,3 @@ class Automata {
     void cook(unsigned int);
     void finish();
 };
-
-#endif //MOD_LAB03_COFFEE_INCLUDE_AUTOMATA_H_
